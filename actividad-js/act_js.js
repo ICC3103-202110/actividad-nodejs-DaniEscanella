@@ -1,34 +1,32 @@
-var nombre = "Daniela";
-var edad = 20;
 
-var edad; //Declaro la variable 
-edad =20; //Inicializar variable
+//var number;
 
-console.log(nombre , "tiene",edad, "años");
+//number=prompt('Give me a number:');
+//console.log(number);
 
-// VAriable complejas
+function Suma (a,b){
+    var mul = a * b
+    return mul
+}
+console.log(Suma(1,2));
 
-//Variables tipo objeto
+// Funciones de tipo Expresion
+var variable = function(){
+    return "hola";
+}
+console.log(variable())
 
-var persona = {
-    nombre: "Daniela",
-    apellido: "Esca",
-    edad: 20
+var amigos = ['Amigo 1', 'Amigo 2', 'Amigo 3']
+function saludarAmigos (amigo){
+    console.log(`Hola, ${amigo}`)
 }
 
-console.log(persona);
-console.log();
-// Array
+//Bucle for
+for ( var i=0; i < amigos.length; i ++){
+    saludarAmigos(amigos[i]);
+}
 
-var amigos =["Santiago","Pedro","Juan", "Diego"];
-var edades =[21,19,20,12];
-console.log(amigos);
+for (amigo of amigos) {
+    saludarAmigos(amigo);
+}
 
-var amigos =[
-    {nombre: 'Santiago', edad: 21},
-    {nombre: 'Pedro', edad: 19},
-    {nombre: 'Juan', edad: 20},
-    {nombre: 'Diego', edad: 12}
-];
-
-console.log(amigos);
