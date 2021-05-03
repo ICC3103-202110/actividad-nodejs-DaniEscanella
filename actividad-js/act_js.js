@@ -1,32 +1,23 @@
 
-//var number;
-
-//number=prompt('Give me a number:');
-//console.log(number);
-
-function Suma (a,b){
-    var mul = a * b
-    return mul
-}
-console.log(Suma(1,2));
-
-// Funciones de tipo Expresion
-var variable = function(){
-    return "hola";
-}
-console.log(variable())
-
-var amigos = ['Amigo 1', 'Amigo 2', 'Amigo 3']
-function saludarAmigos (amigo){
-    console.log(`Hola, ${amigo}`)
+const readline = require('readline').createInterface({
+    input: process.stdin,
+    output: process.stdout
+})
+  
+function fio(num){
+    if (num == 0){
+        return 0
+    } else if (num ==1){
+        return 1
+    } else{
+        value =fio(num-1)+fio(num-2)
+        return value
+    }
 }
 
-//Bucle for
-for ( var i=0; i < amigos.length; i ++){
-    saludarAmigos(amigos[i]);
-}
+readline.question(`Choose a number: `, number => {
 
-for (amigo of amigos) {
-    saludarAmigos(amigo);
-}
-
+    total=fio(number);
+    console.log(total)
+    readline.close()
+});
