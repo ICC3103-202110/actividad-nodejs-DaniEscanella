@@ -18,6 +18,6 @@ function fio(num){
 readline.question(`Choose a number: `, number => {
 
     total=fio(number);
-    console.log(total)
+    console.log(`F(${number}) = ${total}`)
     readline.close()
 });
